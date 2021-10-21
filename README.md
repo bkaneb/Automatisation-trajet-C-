@@ -4,3 +4,4 @@ Les trajets sont enregistrés dans une base de données, ils peuvent être ajout
 La connexion entre le PC et le véhicule est fait via un protocole TCP/IP et un module WIFI intégré dans le véhicule.
 Pour que les trajets se lancent on a le choix d'en envoyer un manuellement via l'application ou par le biais de la fonctionnalité "Mode automatique", le mode automatique lancera le trajet en fonction des heures de départs prévus enregistré dans la base de données.
 Le projet fonctionne en locale, la base de données est en locale et l'adresse IP est à changer dans le programme directement.
+[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://www.loom.com/share/8282d76ef9744d3c8588587dfdd0fdd4?sharedAppSource=personal_library "VIDEO PROJECT")
