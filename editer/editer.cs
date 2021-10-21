@@ -21,6 +21,7 @@ namespace WindowsFormsApplication1
         MySqlConnection cnx;
         public
             int envoie;
+        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e){   
         }
 
@@ -29,14 +30,15 @@ namespace WindowsFormsApplication1
 
         private void editer_Load(object sender, EventArgs e)
         {
+            ACCUEIL.openediter = 1;
             cnx = new MySqlConnection("SERVER=127.0.0.1;PORT=3306;DATABASE=projet;SslMode=none;UID=root;PWD=;");//connexion bd
             if (cnx.State == ConnectionState.Closed)//ouverture bd
             {
                 cnx.Open();
             }
             comboBox1.Items.Clear();//effacer les Items de la comboBox
-            MySqlCommand combocmd = new MySqlCommand("SELECT ID FROM trajets", cnx);//selection
-            //dans la table de la collone ID
+            //selection dans la table de la collone ID
+            MySqlCommand combocmd = new MySqlCommand("SELECT ID FROM trajets", cnx);
             using (MySqlDataReader Liretab = combocmd.ExecuteReader())
             {
                 while (Liretab.Read())
@@ -67,6 +69,11 @@ namespace WindowsFormsApplication1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void editer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ACCUEIL.openediter = 0;
         }
     }
     }

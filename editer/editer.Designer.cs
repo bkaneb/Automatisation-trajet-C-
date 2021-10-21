@@ -71,8 +71,10 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "editer";
             this.Text = "editer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.editer_FormClosing);
             this.Load += new System.EventHandler(this.editer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
